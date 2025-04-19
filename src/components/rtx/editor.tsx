@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { Content, EditorContent } from "@tiptap/react";
 import { useRTXEditor } from "./hooks/useEditor";
 import EditorToolbar from "./toolbar";
+import "./styles/index.css";
 type RTXEditorProps = {
   containerProps?: React.HTMLAttributes<HTMLDivElement>;
   placeholder?: string;
@@ -31,7 +32,7 @@ export default function RTXEditor({
       <div
         {...containerProps}
         className={cn(
-          "w-full h-36 px-4 py-1 shadow-xs border transition-[color,box-shadow] border-input rounded-md bg-transparent cursor-text",
+          "w-full min-h-36 px-4 py-2 shadow-xs border transition-[color,box-shadow] border-input rounded-md bg-transparent cursor-text",
           containerProps?.className
         )}
         onClick={() => {

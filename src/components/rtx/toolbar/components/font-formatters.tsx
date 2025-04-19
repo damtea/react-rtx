@@ -2,7 +2,6 @@ import { Toggle } from "@/components/ui/toggle";
 import {
   IconBold,
   IconClearFormatting,
-  IconHeading,
   IconItalic,
   IconStrikethrough,
   IconUnderline,
@@ -12,18 +11,6 @@ import { SimpleToolTip } from "./custom-tooltip";
 export default function FontFormatters({ editor }: { editor: Editor }) {
   return (
     <>
-      <SimpleToolTip title={"Heading"}>
-        <Toggle
-          asChild
-          onPressedChange={() =>
-            editor.chain().focus().toggleHeading({ level: 1 }).run()
-          }
-          // disabled={!editor.chain().focus().toggleHeading({ level: 1 }).run()}
-          pressed={editor.isActive("heading", { level: 1 })}
-        >
-          <IconHeading className="w-4 h-4" />
-        </Toggle>
-      </SimpleToolTip>
       <SimpleToolTip title={"Bold"}>
         <Toggle
           asChild

@@ -20,6 +20,7 @@ export function TextFormatters({ editor }: TextFormattersProps) {
     if (editor.isActive("heading", { level: 2 })) return "h2";
     if (editor.isActive("heading", { level: 3 })) return "h3";
     if (editor.isActive("heading", { level: 4 })) return "h4";
+    else return "paragraph";
   };
 
   const onChange = (value: string) => {
@@ -53,21 +54,11 @@ export function TextFormatters({ editor }: TextFormattersProps) {
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectItem className="text" value="paragraph">
-            Paragraph
-          </SelectItem>
-          <SelectItem className="text-lg" value="h4">
-            Heading 4
-          </SelectItem>
-          <SelectItem className="text-xl" value="h3">
-            Heading 3
-          </SelectItem>
-          <SelectItem className="text-2xl" value="h2">
-            Heading 2
-          </SelectItem>
-          <SelectItem className="text-3xl" value="h1">
-            Heading 1
-          </SelectItem>
+          <SelectItem value="paragraph">Paragraph</SelectItem>
+          <SelectItem value="h1">Heading 1</SelectItem>
+          <SelectItem value="h2">Heading 2</SelectItem>
+          <SelectItem value="h3">Heading 3</SelectItem>
+          <SelectItem value="h4">Heading 4</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
