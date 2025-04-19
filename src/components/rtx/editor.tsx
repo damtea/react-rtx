@@ -1,11 +1,12 @@
 import { cn } from "@/lib/utils";
-import { EditorContent } from "@tiptap/react";
+import { Content, EditorContent } from "@tiptap/react";
 import { useRTXEditor } from "./hooks/useEditor";
+import EditorToolbar from "./toolbar";
 type RTXEditorProps = {
   containerProps?: React.HTMLAttributes<HTMLDivElement>;
   placeholder?: string;
-  value?: string;
-  onValueChange?: (value?: string) => void;
+  value?: Content;
+  onValueChange?: (value?: Content) => void;
 };
 export default function RTXEditor({
   containerProps,
@@ -16,7 +17,7 @@ export default function RTXEditor({
     placeholder: props.placeholder,
     content: props.value,
     onUpdate: (value) => {
-      if (props?.onValueChange) props.onValueChange(value?.toString());
+      if (props?.onValueChange) props.onValueChange(value);
     },
   });
 
@@ -25,17 +26,24 @@ export default function RTXEditor({
   }
 
   return (
-    <div
-      {...containerProps}
-      className={cn(
-        "w-full h-36 px-4 py-1 shadow-xs border transition-[color,box-shadow] border-input rounded-md bg-transparent cursor-text",
-        containerProps?.className
-      )}
-      onClick={() => {
-        editor?.chain().focus().run();
-      }}
-    >
-      <EditorContent editor={editor} readOnly={false} className="rtx-editor" />
+    <div className="gap-2 grid">
+      <EditorToolbar editor={editor} />
+      <div
+        {...containerProps}
+        className={cn(
+          "w-full h-36 px-4 py-1 shadow-xs border transition-[color,box-shadow] border-input rounded-md bg-transparent cursor-text",
+          containerProps?.className
+        )}
+        onClick={() => {
+          editor?.chain().focus().run();
+        }}
+      >
+        <EditorContent
+          editor={editor}
+          readOnly={false}
+          className="rtx-editor"
+        />
+      </div>
     </div>
   );
 }

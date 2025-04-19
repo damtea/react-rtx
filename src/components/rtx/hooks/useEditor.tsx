@@ -1,10 +1,11 @@
+import HorizontalRule from "@tiptap/extension-horizontal-rule";
+import Image from "@tiptap/extension-image";
+import Link from "@tiptap/extension-link";
+import Placeholder from "@tiptap/extension-placeholder";
+import TextAlign from "@tiptap/extension-text-align";
+import Underline from "@tiptap/extension-underline";
 import { Content, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import Underline from "@tiptap/extension-underline";
-import Link from "@tiptap/extension-link";
-import Image from "@tiptap/extension-image";
-import TextAlign from "@tiptap/extension-text-align";
-import Placeholder from "@tiptap/extension-placeholder";
 
 export type useRTXEditorProps = {
   content?: Content;
@@ -15,10 +16,16 @@ export type useRTXEditorProps = {
 export const useRTXEditor = (props: useRTXEditorProps) => {
   const editor = useEditor({
     extensions: [
-      StarterKit,
+      StarterKit.configure({
+        horizontalRule: false,
+      }),
       Underline,
       Image,
-      //   HorizontalRule,
+      HorizontalRule.configure({
+        HTMLAttributes: {
+          class: "my-4 border-t border-gray-300",
+        },
+      }),
       TextAlign.configure({
         types: ["heading", "paragraph"],
         alignments: ["left", "right", "center", "justify"],
