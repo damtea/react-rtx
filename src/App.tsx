@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
+import RTXEditor from "./components/rtx/editor";
 
 function App() {
   return (
-    <div className="flex flex-col justify-center items-center min-h-svh">
-      <Button>Click me</Button>
+    <div className="p-4">
+      <RTXEditor />
     </div>
   );
 }
