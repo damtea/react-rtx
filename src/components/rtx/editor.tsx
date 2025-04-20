@@ -1,8 +1,8 @@
+import "./styles/index.css";
 import { cn } from "@/lib/utils";
 import { Content, EditorContent } from "@tiptap/react";
 import { useRTXEditor } from "./hooks/useEditor";
 import EditorToolbar from "./toolbar";
-import "./styles/index.css";
 type RTXEditorProps = {
   containerProps?: React.HTMLAttributes<HTMLDivElement>;
   placeholder?: string;

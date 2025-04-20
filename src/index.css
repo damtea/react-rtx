@@ -110,15 +110,6 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-.rtx-editor .ProseMirror {
-  @apply z-0 w-full h-full text-base cursor-text outline-0;
-}
-
-.rtx-editor .ProseMirror > p.is-editor-empty::before {
-  content: attr(data-placeholder);
-  @apply float-left h-0 text-base text-muted-foreground pointer-events-none;
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
