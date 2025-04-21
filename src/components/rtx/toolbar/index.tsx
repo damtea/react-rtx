@@ -7,6 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import InsertObjects from "./components/insert-objects";
 import InsertList from "./components/insert-list";
 import ControlHistory from "./components/control-history";
+import TextAlignments from "./components/text-alignments";
 
 export default function EditorToolbar({ editor }: { editor: Editor }) {
   return (
@@ -17,6 +18,8 @@ export default function EditorToolbar({ editor }: { editor: Editor }) {
             <TextFormatters editor={editor} />
             <Separator orientation="vertical" />
             <FontFormatters editor={editor} />
+            <Separator orientation="vertical" />
+            <TextAlignments editor={editor} />
             <Separator orientation="vertical" />
             <InsertObjects editor={editor} />
             <Separator orientation="vertical" />

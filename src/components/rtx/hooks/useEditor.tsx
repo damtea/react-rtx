@@ -6,7 +6,10 @@ import TextAlign from "@tiptap/extension-text-align";
 import Underline from "@tiptap/extension-underline";
 import { Content, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-
+import Table from "@tiptap/extension-table";
+import TableCell from "@tiptap/extension-table-cell";
+import TableHeader from "@tiptap/extension-table-header";
+import TableRow from "@tiptap/extension-table-row";
 export type useRTXEditorProps = {
   content?: Content;
   onUpdate: (content: Content) => void;
@@ -41,6 +44,12 @@ export const useRTXEditor = (props: useRTXEditorProps) => {
         placeholder: () => props.placeholder || "Type something...",
         showOnlyCurrent: true,
       }),
+      Table.configure({
+        resizable: true,
+      }),
+      TableRow,
+      TableHeader,
+      TableCell,
     ],
     content: props.content,
     onUpdate: ({ editor }) => {

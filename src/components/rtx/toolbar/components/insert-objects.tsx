@@ -1,5 +1,5 @@
 import { Toggle } from "@/components/ui/toggle";
-import { IconLink, IconMinus } from "@tabler/icons-react";
+import { IconLink, IconMinus, IconPhotoPlus } from "@tabler/icons-react";
 import { Editor } from "@tiptap/react";
 import { SimpleToolTip } from "./custom-tooltip";
 import {
@@ -10,6 +10,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import InsertTable from "./insert-table";
 export default function InsertObjects({ editor }: { editor: Editor }) {
   const { from, to } = editor.state.selection;
   const selectedText = editor.state.doc.textBetween(from, to, " ");
@@ -99,7 +100,19 @@ export default function InsertObjects({ editor }: { editor: Editor }) {
           </form>
         </PopoverContent>
       </Popover>
-
+      <InsertTable editor={editor} />
+      {/* todo */}
+      <SimpleToolTip title={"Insert Image"}>
+        <Toggle
+          asChild
+          onPressedChange={() =>
+            editor.chain().focus().setHorizontalRule().run()
+          }
+          pressed={editor.isActive("horizontalRule")}
+        >
+          <IconPhotoPlus className="w-4 h-4" />
+        </Toggle>
+      </SimpleToolTip>
       <SimpleToolTip title={"Horizontale Rule"}>
         <Toggle
           asChild
