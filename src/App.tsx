@@ -1,6 +1,7 @@
 import { useState } from "react";
 import RTXEditor from "./components/rtx/editor";
 import { Content } from "@tiptap/react";
+import RTXViewer from "./components/rtx/viewer";
 function App() {
   const [value, setValue] = useState<Content>();
   return (
@@ -11,6 +12,7 @@ function App() {
           setValue(value);
         }}
       />
+      <RTXViewer value={value} key={value?.toString()} />
     </div>
   );
 }
