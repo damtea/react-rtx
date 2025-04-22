@@ -1,15 +1,15 @@
 import HorizontalRule from "@tiptap/extension-horizontal-rule";
-import Image from "@tiptap/extension-image";
 import Link from "@tiptap/extension-link";
 import Placeholder from "@tiptap/extension-placeholder";
-import TextAlign from "@tiptap/extension-text-align";
-import Underline from "@tiptap/extension-underline";
-import { Content, useEditor } from "@tiptap/react";
-import StarterKit from "@tiptap/starter-kit";
 import Table from "@tiptap/extension-table";
 import TableCell from "@tiptap/extension-table-cell";
 import TableHeader from "@tiptap/extension-table-header";
 import TableRow from "@tiptap/extension-table-row";
+import TextAlign from "@tiptap/extension-text-align";
+import Underline from "@tiptap/extension-underline";
+import { Content, useEditor } from "@tiptap/react";
+import StarterKit from "@tiptap/starter-kit";
+import ImageResize from "tiptap-extension-resize-image";
 export type useRTXEditorProps = {
   content?: Content;
   onUpdate: (content: Content) => void;
@@ -23,7 +23,7 @@ export const useRTXEditor = (props: useRTXEditorProps) => {
         horizontalRule: false,
       }),
       Underline,
-      Image,
+      ImageResize,
       HorizontalRule.configure({
         HTMLAttributes: {
           class: "my-4 border-t border-gray-300",

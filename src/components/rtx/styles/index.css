@@ -76,6 +76,16 @@
     margin: 1.5rem 0;
     padding-left: 1rem;
   }
+  img {
+    display: block;
+    height: 100%;
+    /* margin: 1.5rem; */
+    max-width: 100%;
+
+    &.ProseMirror-selectednode {
+      outline: 3px solid var(--purple);
+    }
+  }
 
   table {
     border-collapse: collapse;

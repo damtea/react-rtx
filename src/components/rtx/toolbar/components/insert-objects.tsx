@@ -1,15 +1,16 @@
-import { Toggle } from "@/components/ui/toggle";
-import { IconLink, IconMinus, IconPhotoPlus } from "@tabler/icons-react";
-import { Editor } from "@tiptap/react";
-import { SimpleToolTip } from "./custom-tooltip";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
+import { Toggle } from "@/components/ui/toggle";
+import { IconLink, IconMinus } from "@tabler/icons-react";
+import { Editor } from "@tiptap/react";
+import { SimpleToolTip } from "./custom-tooltip";
+import InsertImage from "./insert-image";
 import InsertTable from "./insert-table";
 export default function InsertObjects({ editor }: { editor: Editor }) {
   const { from, to } = editor.state.selection;
@@ -101,18 +102,7 @@ export default function InsertObjects({ editor }: { editor: Editor }) {
         </PopoverContent>
       </Popover>
       <InsertTable editor={editor} />
-      {/* todo */}
-      <SimpleToolTip title={"Insert Image"}>
-        <Toggle
-          asChild
-          onPressedChange={() =>
-            editor.chain().focus().setHorizontalRule().run()
-          }
-          pressed={editor.isActive("horizontalRule")}
-        >
-          <IconPhotoPlus className="w-4 h-4" />
-        </Toggle>
-      </SimpleToolTip>
+      <InsertImage editor={editor} />
       <SimpleToolTip title={"Horizontale Rule"}>
         <Toggle
           asChild
