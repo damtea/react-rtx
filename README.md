@@ -1,54 +1,36 @@
-# React + TypeScript + Vite
+# 🚀 Welcome to React Rich Text Experience (react-rtx)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi there! 👋 Welcome to **React Rich Text Experience** — aka **react-rtx** — a modern and minimalistic project template for building rich text editing experiences with ease. Whether you're prototyping or shipping to production, this template helps you get started quickly with a clean, user-friendly WYSIWYG editor.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🖋️ Fully functional **rich text editor** using [Tiptap](https://github.com/ueberdosis/tiptap)
+- 🎨 Clean, accessible UI styled with [Shadcn UI](https://ui.shadcn.com/) and [TailwindCSS](https://tailwindcss.com/)
+- ⚡ Plug-and-play experience – ideal for embedding in forms, blogs, and content creation tools
+- 📦 Easy to extend with custom nodes, menus, and formatting options
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🧰 Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Here’s what powers **react-rtx**:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Tool                                           | Description                                                |
+| ---------------------------------------------- | ---------------------------------------------------------- |
+| [Shadcn UI](https://ui.shadcn.com/)            | Beautiful UI components built on Radix UI + TailwindCSS    |
+| [TailwindCSS](https://tailwindcss.com/)        | Utility-first CSS for rapid styling                        |
+| [Tiptap](https://github.com/ueberdosis/tiptap) | Headless, extendable rich-text editor built on ProseMirror |
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+---
+
+## 📦 Getting Started
+
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/your-username/react-rtx.git
+cd react-rtx
+pnpm install # or npm/yarn
 ```
