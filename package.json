@@ -45,12 +45,12 @@
     "sonner": "^2.0.3",
     "tailwind-merge": "^3.2.0",
     "tailwindcss": "^4.1.4",
-    "tiptap-extension-resize-image": "^1.2.1",
+    "tiptap-extension-resize-image": "^1.2.2",
     "tw-animate-css": "^1.2.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.1",
-    "@types/node": "^22.15.2",
+    "@types/node": "^22.15.3",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",

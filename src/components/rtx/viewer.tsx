@@ -12,7 +12,7 @@ export default function RTXViewer({
   ...props
 }: RTXEditorProps) {
   const { editor } = useRTXEditor({
-    editable: true,
+    editable: false,
     placeholder: props.placeholder,
     content: props.value,
     onUpdate: (value) => {
