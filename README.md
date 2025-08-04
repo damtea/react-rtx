@@ -40,7 +40,7 @@ Clone the repo and install dependencies:
 
 ```bash
 
-git  clone  https://github.com/your-username/react-rtx.git
+git  clone  https://github.com/damtea/react-rtx.git
 
 cd  react-rtx
 
