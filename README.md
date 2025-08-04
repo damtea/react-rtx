@@ -44,6 +44,6 @@ git  clone  https://github.com/damtea/react-rtx.git
 
 cd  react-rtx
 
-pnpm  install  # or npm/yarn
+bun  install
 
 ```
