@@ -10,6 +10,7 @@ import Underline from "@tiptap/extension-underline";
 import { Content, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import ImageResize from "tiptap-extension-resize-image";
+import DOMPurify from "dompurify";
 export type useRTXEditorProps = {
   content?: Content;
   onUpdate: (content: Content) => void;
@@ -53,7 +54,12 @@ export const useRTXEditor = (props: useRTXEditorProps) => {
     ],
     content: props.content,
     onUpdate: ({ editor }) => {
-      props.onUpdate(editor.getHTML());
+      const value = editor.getHTML();
+      const sanitizedValue = DOMPurify.sanitize(value);
+      // console.log("Raw: ", value);
+      // console.log("Sanitized: ", sanitizedValue);
+
+      props.onUpdate(sanitizedValue);
     },
     editable: props.editable,
   });

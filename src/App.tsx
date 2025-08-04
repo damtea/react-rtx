@@ -3,10 +3,14 @@ import RTXEditor from "./components/rtx/editor";
 import { Content } from "@tiptap/react";
 import RTXViewer from "./components/rtx/viewer";
 import { ThemeColorSwitch } from "./components/themeColorSwitch";
+
 function App() {
   const [value, setValue] = useState<Content>();
   return (
     <div className="p-4">
+      <p className="mb-4 font-semibold text-center">
+        Welcome to React RTX Demo
+      </p>
       <RTXEditor
         value={value}
         onValueChange={(value) => {
