@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App.tsx";
 import { Toaster } from "sonner";
 import { TooltipProvider } from "./components/ui/tooltip.tsx";
+import { ThemeProvider } from "./components/theme-provider.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <TooltipProvider>
-      <App />
-    </TooltipProvider>
+    <ThemeProvider defaultTheme="light" storageKey="ui-theme">
+      <TooltipProvider>
+        <App />
+      </TooltipProvider>
+    </ThemeProvider>
     <Toaster />
   </StrictMode>
 );

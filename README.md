@@ -4,11 +4,16 @@ Hi there! 👋 Welcome to **React Rich Text Experience** — aka **react-rtx** �
 
 ---
 
+## Demo: https://rtx-demo.pages.dev/
+
 ## ✨ Features
 
 - 🖋️ Fully functional **rich text editor** using [Tiptap](https://github.com/ueberdosis/tiptap)
+
 - 🎨 Clean, accessible UI styled with [Shadcn UI](https://ui.shadcn.com/) and [TailwindCSS](https://tailwindcss.com/)
+
 - ⚡ Plug-and-play experience – ideal for embedding in forms, blogs, and content creation tools
+
 - 📦 Easy to extend with custom nodes, menus, and formatting options
 
 ---
@@ -17,10 +22,14 @@ Hi there! 👋 Welcome to **React Rich Text Experience** — aka **react-rtx** �
 
 Here’s what powers **react-rtx**:
 
-| Tool                                           | Description                                                |
+| Tool | Description |
+
 | ---------------------------------------------- | ---------------------------------------------------------- |
-| [Shadcn UI](https://ui.shadcn.com/)            | Beautiful UI components built on Radix UI + TailwindCSS    |
-| [TailwindCSS](https://tailwindcss.com/)        | Utility-first CSS for rapid styling                        |
+
+| [Shadcn UI](https://ui.shadcn.com/) | Beautiful UI components built on Radix UI + TailwindCSS |
+
+| [TailwindCSS](https://tailwindcss.com/) | Utility-first CSS for rapid styling |
+
 | [Tiptap](https://github.com/ueberdosis/tiptap) | Headless, extendable rich-text editor built on ProseMirror |
 
 ---
@@ -30,7 +39,11 @@ Here’s what powers **react-rtx**:
 Clone the repo and install dependencies:
 
 ```bash
-git clone https://github.com/your-username/react-rtx.git
-cd react-rtx
-pnpm install # or npm/yarn
+
+git  clone  https://github.com/your-username/react-rtx.git
+
+cd  react-rtx
+
+pnpm  install  # or npm/yarn
+
 ```
