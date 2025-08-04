@@ -7,7 +7,7 @@ import { ThemeColorSwitch } from "./components/themeColorSwitch";
 function App() {
   const [value, setValue] = useState<Content>();
   return (
-    <div className="p-4">
+    <div className="mx-auto p-4 max-w-5xl container">
       <p className="mb-4 font-semibold text-center">
         Welcome to React RTX Demo
       </p>
